@@ -2,8 +2,8 @@
 // so no test has a site address or a name-tag written inside it.
 //
 // YOU CHANGE ONE THING: ME, your name-tag from the UCTP top bar
-// ("You are: Ana-4821" -> 'Ana-4821'). Keep the quotes.
-const ME = process.env.UCTP_NAME_TAG || 'Ana-4821';
+// ("You are: Manuel-8614" -> 'Manuel-8614'). Keep the quotes.
+const ME = process.env.UCTP_NAME_TAG || 'Manuel-8614';
 
 const environments = {
   staging: {
