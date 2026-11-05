@@ -1,0 +1,413 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\ghiki\\uctp-tests\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/api",
+      "--project=api",
+      "--workers=1",
+      "--retries=3",
+      "--pass-with-no-tests",
+      "--grep",
+      "(?:^|\\s)(A4|A1|W1|I1|A2|W2|I2|A3|W3|I3) ·"
+    ],
+    "configFile": "C:\\Users\\ghiki\\uctp-tests\\playwright.config.ts",
+    "rootDir": "C:/Users/ghiki/uctp-tests/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/ghiki/uctp-tests/test-runs/2026-11-05/TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/api",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "C:/Users/ghiki/uctp-tests/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ghiki/uctp-tests/test-runs/2026-11-05/TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/api",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "C:/Users/ghiki/uctp-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/(web|integration)[\\\\/].*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ghiki/uctp-tests/test-runs/2026-11-05/TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/api",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/ghiki/uctp-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/(web|integration)[\\\\/].*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\ghiki\\uctp-tests\\test-runs\\2026-11-05\\TRN-01 Register a taxpayer - 2026-11-05 210833\\raw\\api.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\taxpayer.spec.ts",
+      "file": "api/taxpayer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "A1 · AC-1 · create a taxpayer using valid name and mobile",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1667,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:08:36.286Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5d8b9d2a53ac695f40a9-9507f0612ba115d1abf5",
+          "file": "api/taxpayer.spec.ts",
+          "line": 25,
+          "column": 5
+        },
+        {
+          "title": "A2 · AC-2 · list my taxpayers and verify storage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2537,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:08:37.988Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5d8b9d2a53ac695f40a9-d4841e6171fd5e462290",
+          "file": "api/taxpayer.spec.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "A3 · AC-3 · spaces around the name are removed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2061,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:08:40.548Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5d8b9d2a53ac695f40a9-66bad735fa5bd09e56f1",
+          "file": "api/taxpayer.spec.ts",
+          "line": 54,
+          "column": 5
+        },
+        {
+          "title": "A4 · AC-4 · refuse already registered mobile with specific message",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2056,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:08:42.619Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5d8b9d2a53ac695f40a9-60f26ac59ca25ef45c8e",
+          "file": "api/taxpayer.spec.ts",
+          "line": 67,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "api\\trn-01.spec.ts",
+      "file": "api/trn-01.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Register a taxpayer (API)",
+          "file": "api/trn-01.spec.ts",
+          "line": 13,
+          "column": 6,
+          "specs": [
+            {
+              "title": "A1 · AC-1 · create a taxpayer using \"Ana Dela Cruz\" and a new mobile, no email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 697,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:08:44.697Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "75f030cb6bceb9195b96-29a7c6f5c79325e3b717",
+              "file": "api/trn-01.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "A2 · AC-2 · read back the taxpayer from A1 by its taxpayer_id",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1033,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:08:47.222Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "75f030cb6bceb9195b96-556eae9e300a089880f5",
+              "file": "api/trn-01.spec.ts",
+              "line": 40,
+              "column": 7
+            },
+            {
+              "title": "A3 · AC-2 · find the taxpayer from A1 in my list (created_by = my name-tag)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 673,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:08:48.280Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "75f030cb6bceb9195b96-8c107ecf2ead247a9821",
+              "file": "api/trn-01.spec.ts",
+              "line": 47,
+              "column": 7
+            },
+            {
+              "title": "A4 · AC-3 · create a taxpayer using \"  Ana Dela Cruz  \" (spaces around): saved as \"Ana Dela Cruz\"",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 680,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:08:48.964Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "75f030cb6bceb9195b96-1e75394f2d40a01dc135",
+              "file": "api/trn-01.spec.ts",
+              "line": 54,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T13:08:35.849Z",
+    "duration": 13831.323,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

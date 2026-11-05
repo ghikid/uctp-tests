@@ -1,0 +1,227 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: web\trn-01.spec.ts >> TRN-01 Register a taxpayer (web) >> W3 · AC-2 · see the new taxpayer "Ana Dela Cruz" in My data
+- Location: tests\web\trn-01.spec.ts:33:7
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f3e1]:
+  - note [ref=f3e2]: TRAINING — made-up data only
+  - navigation "Main" [ref=f3e3]:
+    - link "UCTP" [ref=f3e4] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f3e5]:
+      - link "Home" [ref=f3e6] [cursor=pointer]:
+        - /url: /
+      - link "Training setup" [ref=f3e7] [cursor=pointer]:
+        - /url: /training
+      - link "Teller POS" [ref=f3e8] [cursor=pointer]:
+        - /url: /pos
+      - link "Citizen portal" [ref=f3e9] [cursor=pointer]:
+        - /url: /portal
+      - link "Simulator" [ref=f3e10] [cursor=pointer]:
+        - /url: /simulator
+      - link "My data" [ref=f3e11] [cursor=pointer]:
+        - /url: /my-data
+      - link "API docs" [ref=f3e12] [cursor=pointer]:
+        - /url: /docs
+    - generic [ref=f3e14]:
+      - text: "You are:"
+      - strong [ref=f3e15]: Manuel-8614
+      - link "Change" [ref=f3e16] [cursor=pointer]:
+        - /url: "#"
+  - main [ref=f3e17]:
+    - generic [ref=f3e18]:
+      - heading "Training setup" [level=1] [ref=f3e19]
+      - paragraph [ref=f3e20]: Create the data you will use in class — everything here is fictional and yours only.
+      - generic [ref=f3e21]:
+        - heading "1 — Create a taxpayer" [level=2] [ref=f3e22]
+        - generic [ref=f3e23]:
+          - generic [ref=f3e24]: Full name
+          - textbox "Full name" [ref=f3e25]
+        - generic [ref=f3e26]:
+          - generic [ref=f3e27]: Mobile (09XXXXXXXXX)
+          - textbox "Mobile (09XXXXXXXXX)" [ref=f3e28]
+        - generic [ref=f3e29]:
+          - generic [ref=f3e30]: Email (optional)
+          - textbox "Email (optional)" [ref=f3e31]
+        - button "Create taxpayer" [ref=f3e32] [cursor=pointer]
+      - generic [ref=f3e33]:
+        - heading "2 — Create a property tax bill" [level=2] [ref=f3e34]
+        - generic [ref=f3e35]:
+          - generic [ref=f3e36]: Taxpayer (only yours are listed)
+          - combobox "Taxpayer (only yours are listed)" [ref=f3e37]:
+            - option "— pick a taxpayer —" [selected]
+            - option "Rosa Web (09843278572)"
+            - option "Ana Dela Cruz (09843226791)"
+            - option "Ana dzzf Dela Cruz (09673633086)"
+            - option "Ana Dela Cruz (09842526832)"
+            - option "Ana Dela Cruz (09842511491)"
+            - option "Rosa Web (09841708922)"
+            - option "Ana Dela Cruz (09841649471)"
+            - option "Ana jufn Dela Cruz (09315080470)"
+            - option "Ana Dela Cruz (09841289703)"
+            - option "Ana Dela Cruz (09841265222)"
+            - option "Ana Dela Cruz (09841247081)"
+            - option "Ana nifm Dela Cruz (09478210660)"
+            - option "Ana abcd Dela Cruz (09922231547)"
+            - option "Ana amyb Dela Cruz (09613263497)"
+            - option "Ana gkey Dela Cruz (09216951246)"
+            - option "Ana Dela Cruz (09802246073)"
+            - option "Rosa Web (09802217472)"
+            - option "Ana Dela Cruz (09802186951)"
+            - option "Ana Dela Cruz (09802144680)"
+            - option "Ana Dela Cruz (09802092599)"
+            - option "Ana Dela Cruz (09802056137)"
+            - option "Ñoño O'Brien-Cruz Jr. (09802025976)"
+            - option "Ana Dela Cruz (09802033974)"
+            - option "Rosa Web (09802008563)"
+            - option "Ana Dela Cruz (09802001589)"
+            - option "Ana Dela Cruz (09801982242)"
+            - option "Ana Dela Cruz (09801976217)"
+            - option "Ñoño O'Brien-Cruz Jr. (09801953556)"
+            - option "Ana Dela Cruz (09801957481)"
+            - option "Rosa Web (09801887402)"
+            - option "Rosa Web (09801852412)"
+            - option "Ana Dela Cruz (09801854411)"
+            - option "Ana Dela Cruz (09801819171)"
+            - option "Ana Dela Cruz (09801771481)"
+            - option "Ana Dela Cruz (09801713810)"
+            - option "Ana Dela Cruz (09801711019)"
+            - option "Ana Dela Cruz (09801708428)"
+            - option "Ana Dela Cruz (09801701297)"
+            - option "Ñoño O'Brien-Cruz Jr. (09801694166)"
+            - option "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (09801691445)"
+            - option "Al (09801684534)"
+            - option "Ana Dela Cruz (09801677533)"
+            - option "Ana Dela Cruz (09801660222)"
+            - option "Ana Dela Cruz (09801652181)"
+            - option "ming gozun (09201234568)"
+            - option "Manuel P. Minton Jr. (09217439423)"
+            - option "Ana Dela Cruz (09052498706)"
+            - option "Ana Dela Cruz (09051307259)"
+            - option "Ana Dela Cruz (09051204493)"
+            - option "Ana Dela Cruz (09051229316)"
+            - option "Ana Dela Cruz (09039621745)"
+            - option "Ana Dela Cruz (09038978447)"
+        - generic [ref=f3e38]:
+          - generic [ref=f3e39]: PIN (NNN-NN-NNN-NNN-NNN)
+          - textbox "PIN (NNN-NN-NNN-NNN-NNN)" [ref=f3e40]
+        - generic [ref=f3e41]:
+          - generic [ref=f3e42]: Property class
+          - combobox "Property class" [ref=f3e43]:
+            - option "RESIDENTIAL" [selected]
+            - option "COMMERCIAL"
+            - option "AGRICULTURAL"
+            - option "INDUSTRIAL"
+        - generic [ref=f3e44]:
+          - generic [ref=f3e45]: Assessed value (₱)
+          - textbox "Assessed value (₱)" [ref=f3e46]
+        - generic [ref=f3e47]:
+          - generic [ref=f3e48]: Tax year
+          - textbox "Tax year" [ref=f3e49]: "2026"
+        - button "Create property tax bill" [ref=f3e50] [cursor=pointer]
+      - generic [ref=f3e51]:
+        - heading "3 — Create a business tax or fee bill" [level=2] [ref=f3e52]
+        - generic [ref=f3e53]:
+          - generic [ref=f3e54]: Taxpayer (only yours are listed)
+          - combobox "Taxpayer (only yours are listed)" [ref=f3e55]:
+            - option "— pick a taxpayer —" [selected]
+            - option "Rosa Web (09843278572)"
+            - option "Ana Dela Cruz (09843226791)"
+            - option "Ana dzzf Dela Cruz (09673633086)"
+            - option "Ana Dela Cruz (09842526832)"
+            - option "Ana Dela Cruz (09842511491)"
+            - option "Rosa Web (09841708922)"
+            - option "Ana Dela Cruz (09841649471)"
+            - option "Ana jufn Dela Cruz (09315080470)"
+            - option "Ana Dela Cruz (09841289703)"
+            - option "Ana Dela Cruz (09841265222)"
+            - option "Ana Dela Cruz (09841247081)"
+            - option "Ana nifm Dela Cruz (09478210660)"
+            - option "Ana abcd Dela Cruz (09922231547)"
+            - option "Ana amyb Dela Cruz (09613263497)"
+            - option "Ana gkey Dela Cruz (09216951246)"
+            - option "Ana Dela Cruz (09802246073)"
+            - option "Rosa Web (09802217472)"
+            - option "Ana Dela Cruz (09802186951)"
+            - option "Ana Dela Cruz (09802144680)"
+            - option "Ana Dela Cruz (09802092599)"
+            - option "Ana Dela Cruz (09802056137)"
+            - option "Ñoño O'Brien-Cruz Jr. (09802025976)"
+            - option "Ana Dela Cruz (09802033974)"
+            - option "Rosa Web (09802008563)"
+            - option "Ana Dela Cruz (09802001589)"
+            - option "Ana Dela Cruz (09801982242)"
+            - option "Ana Dela Cruz (09801976217)"
+            - option "Ñoño O'Brien-Cruz Jr. (09801953556)"
+            - option "Ana Dela Cruz (09801957481)"
+            - option "Rosa Web (09801887402)"
+            - option "Rosa Web (09801852412)"
+            - option "Ana Dela Cruz (09801854411)"
+            - option "Ana Dela Cruz (09801819171)"
+            - option "Ana Dela Cruz (09801771481)"
+            - option "Ana Dela Cruz (09801713810)"
+            - option "Ana Dela Cruz (09801711019)"
+            - option "Ana Dela Cruz (09801708428)"
+            - option "Ana Dela Cruz (09801701297)"
+            - option "Ñoño O'Brien-Cruz Jr. (09801694166)"
+            - option "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (09801691445)"
+            - option "Al (09801684534)"
+            - option "Ana Dela Cruz (09801677533)"
+            - option "Ana Dela Cruz (09801660222)"
+            - option "Ana Dela Cruz (09801652181)"
+            - option "ming gozun (09201234568)"
+            - option "Manuel P. Minton Jr. (09217439423)"
+            - option "Ana Dela Cruz (09052498706)"
+            - option "Ana Dela Cruz (09051307259)"
+            - option "Ana Dela Cruz (09051204493)"
+            - option "Ana Dela Cruz (09051229316)"
+            - option "Ana Dela Cruz (09039621745)"
+            - option "Ana Dela Cruz (09038978447)"
+        - generic [ref=f3e56]:
+          - generic [ref=f3e57]: Type
+          - combobox "Type" [ref=f3e58]:
+            - option "BUSINESS" [selected]
+            - option "FEE"
+        - generic [ref=f3e59]:
+          - generic [ref=f3e60]: Reference
+          - textbox "Reference" [ref=f3e61]
+        - generic [ref=f3e62]:
+          - generic [ref=f3e63]: Description
+          - textbox "Description" [ref=f3e64]
+        - generic [ref=f3e65]:
+          - generic [ref=f3e66]: Amount (₱)
+          - textbox "Amount (₱)" [ref=f3e67]
+        - generic [ref=f3e68]:
+          - generic [ref=f3e69]: Due date
+          - textbox "Due date" [ref=f3e70]:
+            - /placeholder: YYYY-MM-DD
+        - button "Create bill" [ref=f3e71] [cursor=pointer]
+      - generic [ref=f3e72]:
+        - heading "4 — Create my teller" [level=2] [ref=f3e73]
+        - generic [ref=f3e74]:
+          - generic [ref=f3e75]: Display name
+          - textbox "Display name" [ref=f3e76]
+        - button "Create my teller" [ref=f3e77] [cursor=pointer]
+      - generic [ref=f3e78]:
+        - heading "5 — Create my approver" [level=2] [ref=f3e79]
+        - paragraph [ref=f3e80]: Your own City Treasurer for approving or rejecting void requests on receipts your tellers issued. One per student — clicking again shows the one you have.
+        - generic [ref=f3e81]:
+          - generic [ref=f3e82]: Display name (optional)
+          - textbox "Display name (optional)" [ref=f3e83]
+        - button "Create my approver" [ref=f3e84] [cursor=pointer]
+```

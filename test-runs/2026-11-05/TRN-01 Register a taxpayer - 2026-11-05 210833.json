@@ -1,0 +1,310 @@
+{
+  "run_id": "20261105-210833",
+  "started_at": "2026-11-05T13:08:33.155Z",
+  "finished_at": "2026-11-05T13:22:28.791Z",
+  "base_url": "https://city-treasurer-staging.aiqe.pro",
+  "browsers": [
+    "chrome",
+    "firefox"
+  ],
+  "story": "TRN-01 Register a taxpayer",
+  "counts": {
+    "passed": 24,
+    "flaky": 1,
+    "failed": 8,
+    "blocked": 1,
+    "not_tested": 0
+  },
+  "results": [
+    {
+      "id": "A1",
+      "title": "A1 · AC-1 · create a taxpayer using valid name and mobile",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A2",
+      "title": "A2 · AC-2 · list my taxpayers and verify storage",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A3",
+      "title": "A3 · AC-3 · spaces around the name are removed",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A4",
+      "title": "A4 · AC-4 · refuse already registered mobile with specific message",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A1",
+      "title": "A1 · AC-1 · create a taxpayer using \"Ana Dela Cruz\" and a new mobile, no email",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A2",
+      "title": "A2 · AC-2 · read back the taxpayer from A1 by its taxpayer_id",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A3",
+      "title": "A3 · AC-2 · find the taxpayer from A1 in my list (created_by = my name-tag)",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A4",
+      "title": "A4 · AC-3 · create a taxpayer using \"  Ana Dela Cruz  \" (spaces around): saved as \"Ana Dela Cruz\"",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-1 & AC-2 · create via UI and confirm synchronization with GET API list",
+      "browser": "chrome",
+      "status": "failed",
+      "error": "Error: expect(locator).toContainText(expected) failed\n\nLocator: locator('body')\nTimeout: 5000ms\n- Expected substring  -   1\n+ Received string     + 164\n\n- Ana aqvm Dela Cruz created — mobile 09434339427.",
+      "screenshot": "TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/chrome/integration-taxpayer-integ-06657-onization-with-GET-API-list-chrome-retry3/attachments/screenshot-74f275c856b74b86a692725515997e2d2090ad58.png"
+    },
+    {
+      "id": "I2",
+      "title": "I2 · AC-7 · create via API under Manuel-8614 and verify absence under Manuel-8614-other UI",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-1, AC-2 · create \"Ana Dela Cruz\" with the API, see it on the screen",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I2",
+      "title": "I2 · AC-1, AC-3 · create \"  Rosa Web  \" on the screen, read \"Rosa Web\" from the API",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for name \"A\"",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for mobile \"0917-123-4567\"",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for email \"rosa@examplecom\"",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W1",
+      "title": "W1 · AC-1 · successfully create taxpayer via UI and check result message",
+      "browser": "chrome",
+      "status": "failed",
+      "error": "Error: expect(locator).toContainText(expected) failed\n\nLocator: .result-box, text=created\nExpected substring: \"Ana xiwe Dela Cruz created — mobile 09463614193.\"\nError: Unexpected token \"=\" while parsing css selector \".result-box, text=created\". Did you mean to CSS.escape it?\n\nCall log:\n  - Expect \"toContainText\" .result-box, text=created with timeout 5000ms",
+      "screenshot": "TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/chrome/web-taxpayer-web-W1-·-AC-1-0616d-UI-and-check-result-message-chrome-retry3/attachments/screenshot-75aeb24810983c40a14b0b5554f540d49a7c05ab.png"
+    },
+    {
+      "id": "W2",
+      "title": "W2 · AC-2 · verify taxpayer details appear under My data My taxpayers",
+      "browser": "chrome",
+      "status": "failed",
+      "error": "Error: expect(locator).toContainText(expected) failed\n\nLocator: locator('body')\nTimeout: 5000ms\n- Expected substring  -   1\n+ Received string     + 397\n\n- Ana cqis Dela Cruz",
+      "screenshot": "TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/chrome/web-taxpayer-web-W2-·-AC-2-adcc9--under-My-data-My-taxpayers-chrome-retry3/attachments/screenshot-9c1a2e8e9c3395849725383c22cf0816295db7aa.png"
+    },
+    {
+      "id": "W3",
+      "title": "W3 · AC-3 · spaces around name are trimmed in UI display",
+      "browser": "chrome",
+      "status": "failed",
+      "error": "Error: expect(locator).toContainText(expected) failed\n\nLocator: locator('body')\nTimeout: 5000ms\n- Expected substring  -   1\n+ Received string     + 164\n\n- Ana qwer Dela Cruz created — mobile 09392877203.",
+      "screenshot": "TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/chrome/web-taxpayer-web-W3-·-AC-3-baa81-e-are-trimmed-in-UI-display-chrome-retry3/attachments/screenshot-8066fa16044e23f8f324837affd49d4a32250ff8.png"
+    },
+    {
+      "id": "W1",
+      "title": "W1 · AC-1 · open the Create a taxpayer form: all boxes empty, no result box",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W2",
+      "title": "W2 · AC-1 · create a taxpayer on the screen using \"Ana Dela Cruz\" and a new mobile",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W3",
+      "title": "W3 · AC-2 · see the new taxpayer \"Ana Dela Cruz\" in My data",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-1 & AC-2 · create via UI and confirm synchronization with GET API list",
+      "browser": "firefox",
+      "status": "failed",
+      "error": "Error: expect(locator).toContainText(expected) failed\n\nLocator: locator('body')\nTimeout: 5000ms\n- Expected substring  -   1\n+ Received string     + 164\n\n- Ana czvg Dela Cruz created — mobile 09695575810.",
+      "screenshot": "TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/firefox/integration-taxpayer-integ-06657-onization-with-GET-API-list-firefox-retry3/attachments/screenshot-25a89f92d8bc9e7d696800269dc651b993397b30.png"
+    },
+    {
+      "id": "I2",
+      "title": "I2 · AC-7 · create via API under Manuel-8614 and verify absence under Manuel-8614-other UI",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-1, AC-2 · create \"Ana Dela Cruz\" with the API, see it on the screen",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I2",
+      "title": "I2 · AC-1, AC-3 · create \"  Rosa Web  \" on the screen, read \"Rosa Web\" from the API",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for name \"A\"",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for mobile \"0917-123-4567\"",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for email \"rosa@examplecom\"",
+      "browser": "firefox",
+      "status": "blocked",
+      "error": "Test timeout of 30000ms exceeded while running \"beforeEach\" hook.\n\n   8 |\n   9 | test.describe('TRN-01 Register a taxpayer (integration: API and screen)', () => {\n> 10 |   test.beforeEach(async ({ page }) => {\n     |        ^\n  11 |     await signIn(page);\n  12 |   });",
+      "screenshot": "TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/firefox/integration-trn-01-TRN-01--f446d--for-email-rosa-examplecom--firefox-retry3/attachments/screenshot-6ec58b63008357cef9e83712851fc4f75abcdd9f.png"
+    },
+    {
+      "id": "W1",
+      "title": "W1 · AC-1 · successfully create taxpayer via UI and check result message",
+      "browser": "firefox",
+      "status": "failed",
+      "error": "Test timeout of 30000ms exceeded.\nError: page.waitForEvent: Test ended.\n=========================== logs ===========================\nwaiting for event \"load\"\n============================================================\n\n   at ..\\helpers\\web.ts:52",
+      "screenshot": "TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/firefox/web-taxpayer-web-W1-·-AC-1-0616d-UI-and-check-result-message-firefox-retry3/attachments/screenshot-e6d5e835694635e00eb7657884e9317cbd8ce5d8.png"
+    },
+    {
+      "id": "W2",
+      "title": "W2 · AC-2 · verify taxpayer details appear under My data My taxpayers",
+      "browser": "firefox",
+      "status": "failed",
+      "error": "Test timeout of 30000ms exceeded.\nError: page.waitForEvent: Test ended.\n=========================== logs ===========================\nwaiting for event \"load\"\n============================================================\n\n   at ..\\helpers\\web.ts:52",
+      "screenshot": "TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/firefox/web-taxpayer-web-W2-·-AC-2-adcc9--under-My-data-My-taxpayers-firefox-retry3/attachments/screenshot-a7606cbccd47f3ec69f6b36e54044d5cc3ab5346.png"
+    },
+    {
+      "id": "W3",
+      "title": "W3 · AC-3 · spaces around name are trimmed in UI display",
+      "browser": "firefox",
+      "status": "failed",
+      "error": "Test timeout of 30000ms exceeded.\nError: page.waitForEvent: Test ended.\n=========================== logs ===========================\nwaiting for event \"load\"\n============================================================\n\n   at ..\\helpers\\web.ts:52",
+      "screenshot": "TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/firefox/web-taxpayer-web-W3-·-AC-3-baa81-e-are-trimmed-in-UI-display-firefox-retry3/attachments/screenshot-5f4016c19a879f7456b39c633b8cd22314296ba8.png"
+    },
+    {
+      "id": "W1",
+      "title": "W1 · AC-1 · open the Create a taxpayer form: all boxes empty, no result box",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W2",
+      "title": "W2 · AC-1 · create a taxpayer on the screen using \"Ana Dela Cruz\" and a new mobile",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W3",
+      "title": "W3 · AC-2 · see the new taxpayer \"Ana Dela Cruz\" in My data",
+      "browser": "firefox",
+      "status": "flaky",
+      "error": "Passed on retry 2. First failure:\nTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\n\n   9 |\n  10 | test.describe('TRN-01 Register a taxpayer (web)', () => {\n> 11 |   test.beforeEach(async ({ page }) => {\n     |        ^\n  12 |     await signIn(page);\n  13 |     await page.getByRole('button', { name: 'Create my data' }).click();   // Home › Create my data",
+      "screenshot": "TRN-01 Register a taxpayer - 2026-11-05 210833/artifacts/firefox/web-trn-01-TRN-01-Register-fffd4-er-Ana-Dela-Cruz-in-My-data-firefox-retry1/attachments/screenshot-e573d2df774aa05097260d19ceeecd1b0db52286.png"
+    }
+  ],
+  "not_tested": [],
+  "report": "TRN-01 Register a taxpayer - 2026-11-05 210833.html",
+  "messages": [],
+  "pushed": false,
+  "push_message": "",
+  "folder": "test-runs/2026-11-05",
+  "only": [
+    "A4",
+    "A1",
+    "W1",
+    "I1",
+    "A2",
+    "W2",
+    "I2",
+    "A3",
+    "W3",
+    "I3"
+  ]
+}

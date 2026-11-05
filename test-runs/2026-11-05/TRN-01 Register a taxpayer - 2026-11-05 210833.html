@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test run 20261105-210833</title>
+<style>
+:root{--ok:#15803d;--flaky:#b45309;--bad:#b91c1c;--blocked:#d97706;--grey:#6b7280;--line:#e5e7eb}
+body{font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:24px;color:#111827;background:#fff}
+h1{font-size:22px;margin:0 0 4px} .meta{color:var(--grey);margin:0 0 16px}
+.story{white-space:pre-wrap;background:#f9fafb;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 16px}
+.counts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+.count{border:1px solid var(--line);border-radius:8px;padding:8px 14px;min-width:90px}
+.count b{display:block;font-size:24px}
+table{border-collapse:collapse;width:100%} th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f3f4f6} tr.click{cursor:pointer} tr.click:hover{background:#f9fafb}
+tr.detail{display:none} tr.detail.open{display:table-row} tr.detail td{background:#fafafa}
+pre{white-space:pre-wrap;word-break:break-word;margin:0 0 8px;font-size:13px}
+img{max-width:100%;border:1px solid var(--line)}
+.pill{display:inline-block;padding:1px 8px;border-radius:99px;color:#fff;font-size:13px;white-space:nowrap}
+.pill.passed{background:var(--ok)}.pill.flaky{background:var(--flaky)}.pill.failed{background:var(--bad)}
+.pill.blocked{background:var(--blocked)}.pill.not_tested{background:var(--grey)}
+.hint{color:var(--grey);font-size:13px}
+.msg{background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:8px 12px;margin:0 0 12px}
+.print{font:inherit;padding:6px 14px;border:1px solid #1d4ed8;background:#1d4ed8;color:#fff;border-radius:6px;cursor:pointer}
+@media print{tr.detail{display:table-row} .noprint{display:none} body{margin:0} tr{break-inside:avoid} img{max-height:90vh}}
+</style></head><body>
+<h1>Test run 20261105-210833</h1>
+<p class="meta">https://city-treasurer-staging.aiqe.pro · browsers: chrome, firefox · 2026-11-05T13:08:33.155Z to 2026-11-05T13:22:28.791Z</p>
+<div class="story">TRN-01 Register a taxpayer</div>
+<div class="counts"><div class="count"><b>24</b>Passed</div><div class="count"><b>1</b>Flaky</div><div class="count"><b>8</b>Failed</div><div class="count"><b>1</b>Blocked</div><div class="count"><b>0</b>Not tested</div></div>
+
+<p class="noprint"><button class="print" type="button" onclick="window.print()">Download PDF</button> <span class="hint">Choose "Save as PDF" in the print window. Click a red or amber row to see why.</span></p>
+<table><thead><tr><th>Id</th><th>AC</th><th>Test</th><th>Browser</th><th>Result</th></tr></thead><tbody>
+<tr class="row passed" data-i="0">
+<td>A1</td><td>AC-1</td><td>create a taxpayer using valid name and mobile</td><td>api</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="1">
+<td>A1</td><td>AC-1</td><td>create a taxpayer using &quot;Ana Dela Cruz&quot; and a new mobile, no email</td><td>api</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="2">
+<td>A2</td><td>AC-2</td><td>list my taxpayers and verify storage</td><td>api</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="3">
+<td>A2</td><td>AC-2</td><td>read back the taxpayer from A1 by its taxpayer_id</td><td>api</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="4">
+<td>A3</td><td>AC-3</td><td>spaces around the name are removed</td><td>api</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="5">
+<td>A3</td><td>AC-2</td><td>find the taxpayer from A1 in my list (created_by = my name-tag)</td><td>api</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="6">
+<td>A4</td><td>AC-4</td><td>refuse already registered mobile with specific message</td><td>api</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="7">
+<td>A4</td><td>AC-3</td><td>create a taxpayer using &quot;  Ana Dela Cruz  &quot; (spaces around): saved as &quot;Ana Dela Cruz&quot;</td><td>api</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row failed click" data-i="8" tabindex="0">
+<td>W1</td><td>AC-1</td><td>successfully create taxpayer via UI and check result message</td><td>chrome</td><td><span class="pill failed">Failed</span></td></tr><tr class="detail" id="d8"><td colspan="5"><pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: .result-box, text=created
+Expected substring: &quot;Ana xiwe Dela Cruz created — mobile 09463614193.&quot;
+Error: Unexpected token &quot;=&quot; while parsing css selector &quot;.result-box, text=created&quot;. Did you mean to CSS.escape it?
+
+Call log:
+  - Expect &quot;toContainText&quot; .result-box, text=created with timeout 5000ms</pre><img src="TRN-01%20Register%20a%20taxpayer%20-%202026-11-05%20210833/artifacts/chrome/web-taxpayer-web-W1-%C2%B7-AC-1-0616d-UI-and-check-result-message-chrome-retry3/attachments/screenshot-75aeb24810983c40a14b0b5554f540d49a7c05ab.png" alt="Screenshot of W1 in chrome"></td></tr>
+<tr class="row passed" data-i="9">
+<td>W1</td><td>AC-1</td><td>open the Create a taxpayer form: all boxes empty, no result box</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row failed click" data-i="10" tabindex="0">
+<td>W2</td><td>AC-2</td><td>verify taxpayer details appear under My data My taxpayers</td><td>chrome</td><td><span class="pill failed">Failed</span></td></tr><tr class="detail" id="d10"><td colspan="5"><pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;body&#39;)
+Timeout: 5000ms
+- Expected substring  -   1
++ Received string     + 397
+
+- Ana cqis Dela Cruz</pre><img src="TRN-01%20Register%20a%20taxpayer%20-%202026-11-05%20210833/artifacts/chrome/web-taxpayer-web-W2-%C2%B7-AC-2-adcc9--under-My-data-My-taxpayers-chrome-retry3/attachments/screenshot-9c1a2e8e9c3395849725383c22cf0816295db7aa.png" alt="Screenshot of W2 in chrome"></td></tr>
+<tr class="row passed" data-i="11">
+<td>W2</td><td>AC-1</td><td>create a taxpayer on the screen using &quot;Ana Dela Cruz&quot; and a new mobile</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row failed click" data-i="12" tabindex="0">
+<td>W3</td><td>AC-3</td><td>spaces around name are trimmed in UI display</td><td>chrome</td><td><span class="pill failed">Failed</span></td></tr><tr class="detail" id="d12"><td colspan="5"><pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;body&#39;)
+Timeout: 5000ms
+- Expected substring  -   1
++ Received string     + 164
+
+- Ana qwer Dela Cruz created — mobile 09392877203.</pre><img src="TRN-01%20Register%20a%20taxpayer%20-%202026-11-05%20210833/artifacts/chrome/web-taxpayer-web-W3-%C2%B7-AC-3-baa81-e-are-trimmed-in-UI-display-chrome-retry3/attachments/screenshot-8066fa16044e23f8f324837affd49d4a32250ff8.png" alt="Screenshot of W3 in chrome"></td></tr>
+<tr class="row passed" data-i="13">
+<td>W3</td><td>AC-2</td><td>see the new taxpayer &quot;Ana Dela Cruz&quot; in My data</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row failed click" data-i="14" tabindex="0">
+<td>I1</td><td></td><td>AC-1 &amp; AC-2 · create via UI and confirm synchronization with GET API list</td><td>chrome</td><td><span class="pill failed">Failed</span></td></tr><tr class="detail" id="d14"><td colspan="5"><pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;body&#39;)
+Timeout: 5000ms
+- Expected substring  -   1
++ Received string     + 164
+
+- Ana aqvm Dela Cruz created — mobile 09434339427.</pre><img src="TRN-01%20Register%20a%20taxpayer%20-%202026-11-05%20210833/artifacts/chrome/integration-taxpayer-integ-06657-onization-with-GET-API-list-chrome-retry3/attachments/screenshot-74f275c856b74b86a692725515997e2d2090ad58.png" alt="Screenshot of I1 in chrome"></td></tr>
+<tr class="row passed" data-i="15">
+<td>I1</td><td>AC-1, AC-2</td><td>create &quot;Ana Dela Cruz&quot; with the API, see it on the screen</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="16">
+<td>I2</td><td>AC-7</td><td>create via API under Manuel-8614 and verify absence under Manuel-8614-other UI</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="17">
+<td>I2</td><td>AC-1, AC-3</td><td>create &quot;  Rosa Web  &quot; on the screen, read &quot;Rosa Web&quot; from the API</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="18">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for name &quot;A&quot;</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="19">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for mobile &quot;0917-123-4567&quot;</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="20">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for email &quot;rosa@examplecom&quot;</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row failed click" data-i="21" tabindex="0">
+<td>W1</td><td>AC-1</td><td>successfully create taxpayer via UI and check result message</td><td>firefox</td><td><span class="pill failed">Failed</span></td></tr><tr class="detail" id="d21"><td colspan="5"><pre>Test timeout of 30000ms exceeded.
+Error: page.waitForEvent: Test ended.
+=========================== logs ===========================
+waiting for event &quot;load&quot;
+============================================================
+
+   at ..\helpers\web.ts:52</pre><img src="TRN-01%20Register%20a%20taxpayer%20-%202026-11-05%20210833/artifacts/firefox/web-taxpayer-web-W1-%C2%B7-AC-1-0616d-UI-and-check-result-message-firefox-retry3/attachments/screenshot-e6d5e835694635e00eb7657884e9317cbd8ce5d8.png" alt="Screenshot of W1 in firefox"></td></tr>
+<tr class="row passed" data-i="22">
+<td>W1</td><td>AC-1</td><td>open the Create a taxpayer form: all boxes empty, no result box</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row failed click" data-i="23" tabindex="0">
+<td>W2</td><td>AC-2</td><td>verify taxpayer details appear under My data My taxpayers</td><td>firefox</td><td><span class="pill failed">Failed</span></td></tr><tr class="detail" id="d23"><td colspan="5"><pre>Test timeout of 30000ms exceeded.
+Error: page.waitForEvent: Test ended.
+=========================== logs ===========================
+waiting for event &quot;load&quot;
+============================================================
+
+   at ..\helpers\web.ts:52</pre><img src="TRN-01%20Register%20a%20taxpayer%20-%202026-11-05%20210833/artifacts/firefox/web-taxpayer-web-W2-%C2%B7-AC-2-adcc9--under-My-data-My-taxpayers-firefox-retry3/attachments/screenshot-a7606cbccd47f3ec69f6b36e54044d5cc3ab5346.png" alt="Screenshot of W2 in firefox"></td></tr>
+<tr class="row passed" data-i="24">
+<td>W2</td><td>AC-1</td><td>create a taxpayer on the screen using &quot;Ana Dela Cruz&quot; and a new mobile</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row failed click" data-i="25" tabindex="0">
+<td>W3</td><td>AC-3</td><td>spaces around name are trimmed in UI display</td><td>firefox</td><td><span class="pill failed">Failed</span></td></tr><tr class="detail" id="d25"><td colspan="5"><pre>Test timeout of 30000ms exceeded.
+Error: page.waitForEvent: Test ended.
+=========================== logs ===========================
+waiting for event &quot;load&quot;
+============================================================
+
+   at ..\helpers\web.ts:52</pre><img src="TRN-01%20Register%20a%20taxpayer%20-%202026-11-05%20210833/artifacts/firefox/web-taxpayer-web-W3-%C2%B7-AC-3-baa81-e-are-trimmed-in-UI-display-firefox-retry3/attachments/screenshot-5f4016c19a879f7456b39c633b8cd22314296ba8.png" alt="Screenshot of W3 in firefox"></td></tr>
+<tr class="row flaky click" data-i="26" tabindex="0">
+<td>W3</td><td>AC-2</td><td>see the new taxpayer &quot;Ana Dela Cruz&quot; in My data</td><td>firefox</td><td><span class="pill flaky">Flaky</span></td></tr><tr class="detail" id="d26"><td colspan="5"><pre>Passed on retry 2. First failure:
+Test timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.
+
+   9 |
+  10 | test.describe(&#39;TRN-01 Register a taxpayer (web)&#39;, () =&gt; {
+&gt; 11 |   test.beforeEach(async ({ page }) =&gt; {
+     |        ^
+  12 |     await signIn(page);
+  13 |     await page.getByRole(&#39;button&#39;, { name: &#39;Create my data&#39; }).click();   // Home › Create my data</pre><img src="TRN-01%20Register%20a%20taxpayer%20-%202026-11-05%20210833/artifacts/firefox/web-trn-01-TRN-01-Register-fffd4-er-Ana-Dela-Cruz-in-My-data-firefox-retry1/attachments/screenshot-e573d2df774aa05097260d19ceeecd1b0db52286.png" alt="Screenshot of W3 in firefox"></td></tr>
+<tr class="row failed click" data-i="27" tabindex="0">
+<td>I1</td><td></td><td>AC-1 &amp; AC-2 · create via UI and confirm synchronization with GET API list</td><td>firefox</td><td><span class="pill failed">Failed</span></td></tr><tr class="detail" id="d27"><td colspan="5"><pre>Error: expect(locator).toContainText(expected) failed
+
+Locator: locator(&#39;body&#39;)
+Timeout: 5000ms
+- Expected substring  -   1
++ Received string     + 164
+
+- Ana czvg Dela Cruz created — mobile 09695575810.</pre><img src="TRN-01%20Register%20a%20taxpayer%20-%202026-11-05%20210833/artifacts/firefox/integration-taxpayer-integ-06657-onization-with-GET-API-list-firefox-retry3/attachments/screenshot-25a89f92d8bc9e7d696800269dc651b993397b30.png" alt="Screenshot of I1 in firefox"></td></tr>
+<tr class="row passed" data-i="28">
+<td>I1</td><td>AC-1, AC-2</td><td>create &quot;Ana Dela Cruz&quot; with the API, see it on the screen</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="29">
+<td>I2</td><td>AC-7</td><td>create via API under Manuel-8614 and verify absence under Manuel-8614-other UI</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="30">
+<td>I2</td><td>AC-1, AC-3</td><td>create &quot;  Rosa Web  &quot; on the screen, read &quot;Rosa Web&quot; from the API</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="31">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for name &quot;A&quot;</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="32">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for mobile &quot;0917-123-4567&quot;</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row blocked click" data-i="33" tabindex="0">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for email &quot;rosa@examplecom&quot;</td><td>firefox</td><td><span class="pill blocked">Blocked</span></td></tr><tr class="detail" id="d33"><td colspan="5"><pre>Test timeout of 30000ms exceeded while running &quot;beforeEach&quot; hook.
+
+   8 |
+   9 | test.describe(&#39;TRN-01 Register a taxpayer (integration: API and screen)&#39;, () =&gt; {
+&gt; 10 |   test.beforeEach(async ({ page }) =&gt; {
+     |        ^
+  11 |     await signIn(page);
+  12 |   });</pre><img src="TRN-01%20Register%20a%20taxpayer%20-%202026-11-05%20210833/artifacts/firefox/integration-trn-01-TRN-01--f446d--for-email-rosa-examplecom--firefox-retry3/attachments/screenshot-6ec58b63008357cef9e83712851fc4f75abcdd9f.png" alt="Screenshot of I3 in firefox"></td></tr>
+</tbody></table>
+<script>
+document.querySelectorAll('tr.click').forEach(function (tr) {
+  function toggle() { var d = document.getElementById('d' + tr.dataset.i); if (d) d.classList.toggle('open'); }
+  tr.addEventListener('click', toggle);
+  tr.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+});
+</script>
+</body></html>
